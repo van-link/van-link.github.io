@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>IVAN HOME - Welcom</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-telephone me-2"></i>+086
+                            1234567890a</a>
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href=""><i
+                                class="bi bi-envelope me-2"></i>halodajude@163.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-body ps-2" href="" onmouseover="showImage()" onmouseout="hideImage()">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <div id="imageContainer"
+                            style="position: fixed; top: 10px; right: 10px; width: 16%; height: 16%; z-index: 9999; display: none;">
+                            <img src="../img/contact/weixin.jpg" alt="" style="max-width: 100%; height: auto;">
+                        </div>
+                        <script>
+                            function showImage() {
+                                var imageContainer = document.getElementById("imageContainer");
+                                imageContainer.style.display = "inline-block";
+                            }
+
+                            function hideImage() {
+                                var imageContainer = document.getElementById("imageContainer");
+                                imageContainer.style.display = "none";
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>van-link</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="../index.html" class="nav-item nav-link">主页</a>
+                        <a href="../tools.html" class="nav-item nav-link active">工具</a>
+                        <a href="../blogs/blog_main.html" class="nav-item nav-link">博客</a>
+                        <a href="../about.html" class="nav-item nav-link">关于</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    <!-- Blog Start -->
+    <div id = "content"class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <!-- Blog Detail Start -->
+                <div class="mb-5">
+                    <img class="img-fluid w-100 rounded mb-5" src="../img/aisChart/aisChart_main.png" alt="">
+                    <h1 class="mb-4">串口工具-aisChart</h1>
+                    <!-- 目录 -->
+                    <div class="blog-font-toc">
+                        <ul>
+                            <li><a class="blog-font-toc" href="#section1">基本配置</a></li>
+                            <li><a class="blog-font-toc" href="#section2">数据接收和发送</a></li>
+                            <li><a class="blog-font-toc" href="#section3">导入AT指令</a></li>
+                            <li><a class="blog-font-toc" href="#section4">串口数率监测</a></li>
+                        </ul>
+                    </div>
+                    <!-- 正文内容 -->
+                    <div id="section1">
+                        <h3>基本配置</h3>
+                        <p>一. 串口设置<br>
+                                点击 “设置”，打开串口设置窗口</p>
+                        <img src="../img/aisChart/aisChart_port.png" class="img-fluid w-100 rounded mb-5">
+                        <p>一. 选择工作区<br>
+                                点击 “文件”，选择一个文件夹作为工作区，之后的日志都会保存在这个文件夹内</p>
+                        <img src="../img/aisChart/aisChart_workspace.png" class="img-fluid w-100 rounded mb-5">
+                    </div>
+                    <div id="section2">
+                        <h3>数据接收和发送</h3>
+                        <p>一. 配置数据格式<br>
+                                如下图所示</p>
+                        <img src="../img/aisChart/aisChart_dataFrame.png" class="img-fluid w-100 rounded mb-5">
+                        <p>①发送项<br>
+                            选择“main”，则下面输入栏的信息会被发送出去；选择“watch”，则右侧“view”栏的数据会被发送</p>
+                        <p>②“回车换行”<br>
+                            只会对字符串有效，发送时会自动在字符串后面加上“\r\n”</p>
+                        <p>③④“间隔”<br>
+                            发送数据帧之间的间隔，单位为毫秒。比如我们要发送两帧数据，“abcd”;"efgh",这两帧数据的间隔</p>
+                        <p>⑤“发送次数”<br>
+                            发送数据的次数，比如输入框有两帧数据，“abcd”;"efgh",这两帧数据发送完为一次，下拉到底会有“∞”，表示无限次发送</p>
+                        <p>⑥“LOG”<br>
+                            日志功能，点下的时候会自动把日志记录下来存放到工作区内，若是没有设置工作区则会报错。日志记录从当前按下开始</p>
+                        <p>⑦“M”<br>
+                            测量功能，可以测量出当前窗口内的发送和接收的数据的长度</p>
+                        <p>⑧“C”<br>
+                            清除功能，清除当前窗口内的发送和接收的数据</p>
+                    </div>
+                    <div id="section3">
+                        <h3>导入AT指令</h3>
+                        <p>一. AT指令格式<br>
+                            如下图所示</p>
+                        <img src="../img/aisChart/aisChart_AT.png" class="img-fluid w-100 rounded mb-5">
+                        <p> AT指令格式必须为上图所示<br>
+                            导入成功后会如下图所示</p>
+                        <img src="../img/aisChart/aisChart_ATV.png" class="img-fluid w-100 rounded mb-5">
+                    </div>
+                    <div id="section4">
+                        <h3>串口数率检测</h3>
+                        <p>一. 串口数率检测<br>
+                            如下图所示</p>
+                        <img src="../img/aisChart/aisChart_dataSpeed.png" class="img-fluid w-100 rounded mb-5">
+                        <p> 串口数率监测功能可以检测串口的数率，但是需要注意的是，串口数率监测功能只能监测串口的数率，不能分辨串口的波特率，所以在使用串口数率监测功能时，需要先设置串口的波特率，然后再使用串口数率监测功能</p>
+                        <p>①总接收发送<br>
+                            这里显示的是全部的接收和发送的数据的长度</p>
+                        <p>②速率测量<br>
+                            这里可以输入起始点和结束点，如果只输入了一个点的坐标，则测量此点的速率，如果输入了两个点的坐标，则测量这两个点之间的平均速率</p>
+                        <p>③采样率<br>
+                            采样率越小，测量的速率越准确，但是采样率越小，测量的速率就越不稳定</p>
+                    </div>
+                </div>
+                <!-- Blog Detail End -->
+            </div>
+    
+            <!-- Sidebar Start -->
+            <div class="col-lg-4">
+                <!-- Search Form Start -->
+                <div class="mb-5">
+                    <div class="input-group">
+                        <input type="text" class="form-control p-3" id="searchInput" placeholder="Keyword">
+                        <button class="btn btn-primary px-3" onclick="search()"><i class="fa fa-search"></i> </button>
+                    </div>
+                </div>
+                <!-- Search Form End -->
+                <!-- download Form Start -->
+                <ul >
+                    <li><i class="fa fa-robot"> </i><a href="https://media.githubusercontent.com/media/van-link/van-link.github.io/realease/aisChart.7z"> aisChart v1.0.0</a></li>
+                </ul>
+                <!-- download Form End -->
+                <script>
+                    function search() {
+                        // 获取搜索关键字
+                        var keyword = document.getElementById("searchInput").value;
+                        // 获取内容区域
+                        var content = document.getElementById("content");
+                        // 获取所有内容段落
+                        var paragraphs = content.getElementsByTagName("p");
+
+                        // 遍历每个段落进行搜索
+                        for (var i = 0; i < paragraphs.length; i++) {
+                            var paragraph = paragraphs[i];
+                            var text = paragraph.innerText;
+
+                            // 判断段落中是否包含关键字
+                            if (text.includes(keyword)) {
+                                // 高亮匹配的关键字
+                                var highlightedText = text.replace(new RegExp(keyword, "gi"), "<span class='highlight'>$&</span>");
+                                paragraph.innerHTML = highlightedText;
+                                // 设置滚动目标位置为匹配段落的顶部位置
+                                paragraph.scrollIntoView({ behavior: "smooth", block:"center"  });
+
+                                // 停止继续搜索
+                                break;                                
+                            }
+                        }
+                    }
+                </script>
+                
+                <style>
+                    .highlight {
+                        background-color: yellow;
+                        font-weight: bold;
+                    }
+                </style>
+            </div>
+            <!-- Sidebar End -->
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
