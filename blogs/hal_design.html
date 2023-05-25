@@ -230,20 +230,20 @@
                             </p>
                             <img src="blogs_source/hal_design/hal_1.4_8.png" class="img-fluid w-75 rounded">
                         <h2 class="blog-font-cata1" id="section2">二. 设计方法</h2>
-                            <h3 class="blog-font-cata1" id="section1.1">2.1 了解硬件</h3>
+                            <h3 class="blog-font-cata1" id="section2.1">2.1 了解硬件</h3>
                                 <p class="blog-indent">设计人员必须对与之交互的硬件有全面的了解。这包括了解硬件的电气特性，通信协议以及任何其他相关细节。</p>
                                 <img src="blogs_source/hal_design/hal_2.1_1.png" class="img-fluid w-75 rounded">
-                            <h3 class="blog-font-cata1" id="section1.1">2.2 确定关键抽象</h3>
+                            <h3 class="blog-font-cata1" id="section2.2">2.2 确定关键抽象</h3>
                                 <p class="blog-indent">设计人员必须确定用于表示硬件的关键抽象。这些抽象应该是高级别的，将硬件实现的细节隐藏起来，使其对系统的其他部分不可见。</p>
                                 <img src="blogs_source/hal_design/hal_2.1_2.png" class="img-fluid w-75 rounded">
-                            <h3 class="blog-font-cata1" id="section1.1">2.3 定义API</h3>
+                            <h3 class="blog-font-cata1" id="section2.3">2.3 定义API</h3>
                                 <p class="blog-indent">确定关键抽象之后，设计人员必须定义API，允许高层的软件通过HAL与硬件交互。API应该极可能简单直观，同时需要满足访问所有必要功能的能力。</p>
                                 <img src="blogs_source/hal_design/hal_2.1_3.png" class="img-fluid w-50 rounded">
-                            <h3 class="blog-font-cata1" id="section1.1">2.4 实现HAL</h3>
+                            <h3 class="blog-font-cata1" id="section2.4">2.4 实现HAL</h3>
                                 <p class="blog-indent">定义API之后，设计人员实现HAL，通过涉及编写直接与硬件交互的低级代码，以及将硬件特定的细节映射到API中定义的高级抽象代码。</p>
                                 <img src="blogs_source/hal_design/hal_2.1_4.png" class="img-fluid w-50 rounded">
                                 <img src="blogs_source/hal_design/hal_2.1_5.png" class="img-fluid w-50 rounded">
-                            <h3 class="blog-font-cata1" id="section1.1">2.5 测试与改进</h3>
+                            <h3 class="blog-font-cata1" id="section2.5">2.5 测试与改进</h3>
                                 <p class="blog-indent">设计人员必须测试HAL，以确保其正确地实现了API。如果发现错误，设计人员必须修改HAL，直到其正确地实现了API。设计人员还应该在之后的客户反馈等不断改进HAL。</p>
                     </div>
                 </div>
