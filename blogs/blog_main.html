@@ -103,7 +103,7 @@
 
 
     <!-- Blog Start -->
-    <div class="container py-5">
+    <div id = "content" class="container py-5">
         <div class="row g-5">
             <div class="col-lg-8">
                 <!-- Blog Detail Start -->
@@ -284,12 +284,45 @@
                 <!-- Search Form Start -->
                 <div class="mb-5">
                     <div class="input-group">
-                        <input type="text" class="form-control p-3" placeholder="Keyword">
-                        <button class="btn btn-primary px-3"><i class="fa fa-search"></i></button>
+                        <input type="text" class="form-control p-3" id="searchInput" placeholder="Keyword">
+                        <button class="btn btn-primary px-3" onclick="search()"><i class="fa fa-search"></i> </button>
                     </div>
                 </div>
                 <!-- Search Form End -->
+                <script>
+                    function search() {
+                        // 获取搜索关键字
+                        var keyword = document.getElementById("searchInput").value;
+                        // 获取内容区域
+                        var content = document.getElementById("content");
+                        // 获取所有内容段落
+                        var paragraphs = content.getElementsByTagName("p");
 
+                        // 遍历每个段落进行搜索
+                        for (var i = 0; i < paragraphs.length; i++) {
+                            var paragraph = paragraphs[i];
+                            var text = paragraph.innerText;
+
+                            // 判断段落中是否包含关键字
+                            if (text.includes(keyword)) {
+                                // 高亮匹配的关键字
+                                var highlightedText = text.replace(new RegExp(keyword, "gi"), "<span class='highlight'>$&</span>");
+                                paragraph.innerHTML = highlightedText;
+                                // 设置滚动目标位置为匹配段落的顶部位置
+                                paragraph.scrollIntoView({ behavior: "smooth", block: "center" });
+
+                                // 停止继续搜索
+                                break;
+                            }
+                        }
+                    }
+                </script>
+                <style>
+                    .highlight {
+                        background-color: yellow;
+                        font-weight: bold;
+                    }
+                </style>
                 <!-- Category Start -->
                 <div class="mb-5 blog_dropdown">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mb-4">类别</h4>
