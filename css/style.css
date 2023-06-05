@@ -244,25 +244,7 @@
     width: 150px;
     height: 150px;
 }
-.blog-font-toc{
-    font-family: 'Jost', sans-serif;
-    font-size: 19px;
-    font-weight: 600;
-    color: var(--dark);
-    outline: none;
-    transition: .5s;
-}
-.blog-font-cata1 {
-    font-family: 'Jost', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--dark);
-    outline: none;
-    transition: .5s;
-}
-.blog-indent {
-    text-indent: 2em;
-}
+
 code {
     background-color: var(--dark);
     padding: 1px;
@@ -334,4 +316,44 @@ code {
 
 #touch5:checked+.slide {
     height: 0px;
+}
+.blog-font-toc {
+    font-family: 'Jost', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--dark);
+    outline: none;
+    transition: .5s;
+}
+
+.blog-font-cata1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark);
+    outline: none;
+    transition: .5s;
+}
+
+.blog-indent {
+    text-indent: 2em;
+}
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    margin: 0px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

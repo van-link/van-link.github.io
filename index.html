@@ -100,7 +100,7 @@
         <div class="container py-5">
             <div class="row justify-content-start">
                 <div class="col-lg-8 text-center text-lg-start">
-                    <h1 class="display-6 text-white mb-md-4">保持谦卑,负重前行<br>时刻不忘社会主义接班人身份</h1>
+                    <h1 class="display-6 text-white mb-md-4">保持谦卑,负重前行<br>社会主义优秀接班人</h1>
                 </div>
             </div>
         </div>
@@ -109,102 +109,82 @@
     <!-- Main Start -->
     <div class="container-fluid bg-primary py-5 mb-5">
         <div class="container py-5">
-            <h1>CRC Verification ASCII Converter</h1>
+            <h1>Development tools</h1>
             <div class="col-12">
                 <textarea class="form-control bg-white border-0" rows="5" placeholder="input" id= "inputData"></textarea>
             </div>
             <input type="submit" class="btn-dark" value="CRC16" onclick="performCRC16()"><input type="submit" class="btn-dark" value="CRC32" onclick="performCRC32()">
             <input type="submit" class="btn-dark" value="ASCII to HEX" onclick="performASCII()"><input type="submit" class="btn-dark" value="HEX to ASCII" onclick="performHEX()">
+            <input type="submit" class="btn-warning" value="翻译" onclick="generateAItrans()">
+            <b  class=" text-dark">选项:</b><img id = "loading" class="">
+            <select name="membership" id="options">
+                <option value="frChinese">中译英</option>
+                <option value="frEnglish" selected>英译中</option>
+            </select>
             <div class="col-12">
                 <textarea class="form-control bg-dark text-white border-0" rows="5" placeholder="output" id="result" readonly="readonly"></textarea>
             </div>
         </div>
     </div>
-<script>
-    // CRC Verification Functions
-    function performCRC16() {
-        var inputData = document.getElementById("inputData").value;
-        var calculatedCRC = crc16(inputData);
-        document.getElementById("result").textContent = calculatedCRC;
-    }
-    function performCRC32() {
-        var inputData = document.getElementById("inputData").value;
-        var calculatedCRC = crc32(inputData);
-        document.getElementById("result").textContent = calculatedCRC;
-    }
-    function crc32(input) {
-        var crcTable = generateCRCTable();
-        var crc = 0xFFFFFFFF;
-        input = input.trim().replace(/\s+/g, ' ');
-        var splitInput = input.split(" ");
-        for (var i = 0; i < splitInput.length; i++) {
-            var byte = splitInput[i] & 0xFF;
-            crc = (crc >>> 8) ^ crcTable[(crc ^ byte) & 0xFF];
-        }
-
-        crc = crc ^ 0xFFFFFFFF;
-        return crc.toString(16).toUpperCase();
-    }
-    function generateCRCTable() {
-        var crcTable = new Uint32Array(256);
-
-        for (var i = 0; i < 256; i++) {
-            var crc = i;
-
-            for (var j = 0; j < 8; j++) {
-                if (crc & 1) {
-                    crc = (crc >>> 1) ^ 0xEDB88320;
-                } else {
-                    crc = crc >>> 1;
-                }
-            }
-
-            crcTable[i] = crc;
-        }
-
-        return crcTable;
-    }
-    function crc16(input) {
-        let crcValue = 0xFFFF;
-        input = input.trim().replace(/\s+/g, ' ');
-        var splitInput = input.split(" ");        
-        for (let i = 0; i < splitInput.length; i++) {
-            crcValue ^= splitInput[i] & 0xFFFF
-            for (let j = 0; j < 8; j++) {
-                if (crcValue & 0x0001) {
-                    crcValue >>= 1
-                    crcValue ^= 0xA001
-                } else {
-                    crcValue >>= 1
-                }
-            }
-        }
-        return crcValue.toString(16).toUpperCase();
-    }
-    // ASCII Converter
-    function performASCII() {
-        var inputData = document.getElementById("inputData").value;
-        var result = "";
-        for (var i = 0; i < inputData.length; i++) {
-            result += inputData.charCodeAt(i).toString(16).toUpperCase() + " ";
-        }
-        document.getElementById("result").textContent = result;
-    }
-    function performHEX() {
-        var inputData = document.getElementById("inputData").value;
-        var result = "";
-        var splitInput = inputData.split(" ");
-        for (var i = 0; i < splitInput.length; i++) {
-            result += String.fromCharCode(parseInt(splitInput[i], 16));
-        }
-        document.getElementById("result").textContent = result;
-    }
-</script>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/md5.js"></script>
+    <script>
+        var appid = '20230604001700338';
+        var key = 'J2S3UtivkSqarWlOlAPX';
+        var salt = (new Date).getTime();
+        var query = '';
+        // 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
+        var from = 'en';
+        var to = 'zh';
+        var domain = 'it';
+        const promptInput = document.getElementById("inputData");
+        const promptInputoption = document.getElementById("options");
+        const loader = document.getElementById("loading");
+        const generateAItrans = async () => {
+            if (!promptInput.value) {
+                alert("Please enter a prompt.");
+                return;
+            }
+            query = promptInput.value;
+            var str1 = appid + query + salt + key;
+            var sign = MD5(str1);
+            loader.classList.add("loader");
+            var result = "";
+            if (promptInputoption.value == "frChinese") {
+                from = 'zh';
+                to = 'en';
+            } else if (promptInputoption.value == "frEnglish") {
+                from = 'en';
+                to = 'zh';
+            }
+            jQuery.ajax({
+                url: 'https://fanyi-api.baidu.com/api/trans/vip/translate',
+                type: 'get',
+                dataType: 'jsonp',
+                data: {
+                    q: query,
+                    appid: appid,
+                    salt: salt,
+                    from: from,
+                    to: to,
+                    sign: sign,
+                    domain: domain
+                },
+                success: function (data) {
+                    document.getElementById("result").textContent = data.trans_result[0].dst;
+                }
+            });
+            loader.classList.remove("loader");
+        }
+        
+    </script>
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
