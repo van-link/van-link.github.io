@@ -196,7 +196,7 @@ function ByteCount() {
 function removeEx() {
     var inputData = document.getElementById("inputData").value;
     var result = 0;
-    var ChineseChars = inputData.match(/[\u4e00-\u9fa5]/g);
+    var ChineseChars = inputData.match(/[\u4e00-\u9fa5，。！？、；：“”【】（）《》]/g);
     if (ChineseChars != null) {
         result = ChineseChars.join("");
     } else {

@@ -111,7 +111,7 @@
         <div class="container py-5">
             <h1>Development tools</h1>
             <div class="col-12">
-                <textarea class="form-control bg-white border-0" rows="5" placeholder="input" id= "inputData"></textarea>
+                <textarea class="form-control bg-white border-0" rows="5" placeholder="输入, 统计的时候需要元素间加符号以区分。中文不需添加，中文去除多余字符会除掉非中文标点符号。" id= "inputData"></textarea>
             </div>
             <input type="submit" class="btn-dark" value="CRC16" onclick="performCRC16()"><input type="submit" class="btn-dark" value="CRC32" onclick="performCRC32()">
             <input type="submit" class="btn-dark" value="ASCII to HEX" onclick="performASCII()"><input type="submit" class="btn-dark" value="HEX to ASCII" onclick="performHEX()">
@@ -123,7 +123,7 @@
                 <option value="frEnglish" selected>英译中</option>
             </select>
             <div class="col-12">
-                <textarea class="form-control bg-dark text-white border-0" rows="5" placeholder="output" id="result" readonly="readonly"></textarea>
+                <textarea class="form-control bg-dark text-white border-0" rows="5" placeholder="输出" id="result" readonly="readonly"></textarea>
             </div>
         </div>
     </div>
