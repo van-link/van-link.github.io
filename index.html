@@ -115,6 +115,7 @@
             </div>
             <input type="submit" class="btn-dark" value="CRC16" onclick="performCRC16()"><input type="submit" class="btn-dark" value="CRC32" onclick="performCRC32()">
             <input type="submit" class="btn-dark" value="ASCII to HEX" onclick="performASCII()"><input type="submit" class="btn-dark" value="HEX to ASCII" onclick="performHEX()">
+            <input type="submit" class="btn-dark" value="统计" onclick="ByteCount()"><input type="submit" class="btn-dark" value="去掉多余字符" onclick="removeEx()">
             <input type="submit" class="btn-warning" value="翻译" onclick="generateAItrans()">
             <b  class=" text-dark">选项:</b><img id = "loading" class="">
             <select name="membership" id="options">
@@ -152,7 +153,6 @@
             var str1 = appid + query + salt + key;
             var sign = MD5(str1);
             loader.classList.add("loader");
-            var result = "";
             if (promptInputoption.value == "frChinese") {
                 from = 'zh';
                 to = 'en';

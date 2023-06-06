@@ -179,6 +179,33 @@ function performHEX() {
         }
     document.getElementById("result").textContent = result;
 }
+function ByteCount() {
+    var inputData = document.getElementById("inputData").value;
+    var result = 0;
+    var ChineseChars = inputData.match(/[\u4e00-\u9fa5]/g);
+    if (ChineseChars != null) {
+        result = ChineseChars.length;
+    }else{
+        var input = inputData.replace(/[^\w\s]|_/g, ' ');
+        input = input.trim().replace(/\s+/g, ' ');
+        var splitInput = input.split(" ");
+        result = splitInput.length;
+    }
+    document.getElementById("result").textContent = result;
+}
+function removeEx() {
+    var inputData = document.getElementById("inputData").value;
+    var result = 0;
+    var ChineseChars = inputData.match(/[\u4e00-\u9fa5]/g);
+    if (ChineseChars != null) {
+        result = ChineseChars.join("");
+    } else {
+        var input = inputData.replace(/[^\w\s]|_/g, ' ');
+        input = input.trim().replace(/\s+/g, ' ');
+        result = input;
+    }
+    document.getElementById("result").textContent = result;
+}
 // const url = 'https://deepl-translator.p.rapidapi.com/translate';
 // const options = {
 //     method: 'POST',
