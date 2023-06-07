@@ -187,9 +187,13 @@ function ByteCount() {
         result = ChineseChars.length;
     }else{
         var input = inputData.replace(/[^\w\s]|_/g, ' ');
-        input = input.trim().replace(/\s+/g, ' ');
-        var splitInput = input.split(" ");
-        result = splitInput.length;
+        if (input == "") {
+            result = 0;
+        }else{
+            input = input.trim().replace(/\s+/g, ' ');
+            var splitInput = input.split(" ");
+            result = splitInput.length;
+        }
     }
     document.getElementById("result").textContent = result;
 }
