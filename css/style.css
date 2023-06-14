@@ -282,7 +282,7 @@ code {
     height: 0px;
 }
 #touch1:checked+.slide {
-    height: 0px;
+    height: 30px;
 }
 #touch2 {
     position: absolute;
@@ -315,7 +315,7 @@ code {
 }
 
 #touch5:checked+.slide {
-    height: 0px;
+    height: 30px;
 }
 .blog-font-toc {
     font-family: 'Jost', sans-serif;
@@ -334,7 +334,14 @@ code {
     outline: none;
     transition: .5s;
 }
-
+.blog-font-cata0 {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+    outline: none;
+    transition: .5s;
+}
 .blog-indent {
     text-indent: 2em;
 }

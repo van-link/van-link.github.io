@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>IVAN HOME - Welcome</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-telephone me-2"></i>+086
+                            1234567890a</a>
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href=""><i
+                                class="bi bi-envelope me-2"></i>halodajude@163.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-body ps-2" href="" onmouseover="showImage()" onmouseout="hideImage()">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <div id="imageContainer"
+                            style="position: fixed; top: 10px; right: 10px; width: 16%; height: 16%; z-index: 9999; display: none;">
+                            <img src="../img/contact/weixin.jpg" alt="" style="max-width: 100%; height: auto;">
+                        </div>
+                        <script>
+                            function showImage() {
+                                var imageContainer = document.getElementById("imageContainer");
+                                imageContainer.style.display = "inline-block";
+                            }
+
+                            function hideImage() {
+                                var imageContainer = document.getElementById("imageContainer");
+                                imageContainer.style.display = "none";
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="../index.html" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>van-link</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="../index.html" class="nav-item nav-link">主页</a>
+                        <a href="../tools.html" class="nav-item nav-link">工具</a>
+                        <a href="blog_main.html" class="nav-item nav-link active">博客</a>
+                        <a href="../about.html" class="nav-item nav-link">关于</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Blog Start -->
+    <div id = "content" class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <!-- Blog Detail Start -->
+                <div class="mb-5">
+                    <img class="img-fluid w-100 rounded mb-5" src="blogs_source/protocol/protocol_iot.jpg" alt="">
+                    <h1 class="mb-4">协议（Protocol）</h1>
+                    <!-- 目录 -->
+                    <div>
+                        <ul>
+                            <li><a class="blog-font-toc" href="#section1">协议基础</a></li>
+                            <ul>
+                                <li><a class="blog-font-cata1" href="#section1.1">1.1 概述</a></li>
+                                <li><a class="blog-font-cata1" href="#section1.2">1.2 通信协议</a></li>
+                                <li><a class="blog-font-cata1" href="#section1.3">1.3 分支的操作</a></li>
+                                <li><a class="blog-font-cata1" href="#section1.4">1.4 Git工作流</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <!-- 正文内容 -->
+                    <div id="section1">
+                        <h2 class="blog-font-toc">一. 协议基础</h2>
+                            <h3 class="blog-font-cata1" id="section1.1">1.1 概述</h3>
+                                <p class="blog-indent">任何两个设备之间的通信只有在硬件和软件连接性方面兼容时才能进行。而这种兼容性是通过协议来实现的。</p>
+                                <p class="blog-indent">硬件兼容性指的是设备之间的物理连接，例如数据传输所使用的端口类型、电缆和协议等。例如，如果两个设备具有不同的端口类型（如USB、以太网、HDMI），它们可能不直接兼容，除非使用适当的适配器或转换器。</p>
+                                <p class="blog-indent">软件兼容性则涉及设备之间数据交换的规则和约定。这就是协议发挥作用的地方。协议定义了数据的格式、结构、传输顺序以及解释和错误处理的规则。它确保设备能够有效地理解和交流。</p>
+                                <p class="blog-indent">简而言之，“设备网络中的所有用户必须遵守的一组规则”，这些规则有通信中所涉及的数据格式、消息的传递方式、错误检测和纠正机制、数据传输的顺序和流程控制等各个方面。</p>
+                                <p class="blog-indent">协议可以是开放的，也可能是专有的</p>
+                                <p class="blog-indent">●开放协议（Open Protocol）是指公开可访问和使用的协议，其规范和实现细节对任何人都是可见和可获取的。开放协议通常由标准化组织、行业协会或开源社区等共同制定和维护，以促进互操作性和技术合作。</p>
+                                <p class="blog-indent">常用的开放协议有 TCP/IP、HTTP、SMTP、Bluetooth LE等</p>
+                                <p class="blog-indent">●专有协议（Proprietary Protocol）是指由特定厂商或组织私有拥有和控制的协议。这些协议的规范和实现细节可能只对该厂商或组织内部可见，对外部人员通常是闭源的。</p>
+                            <h3 class="blog-font-cata1" id="section1.2">1.2 通信协议</h3>
+                                <p class = "blog-indent">然而，网络通信添加到嵌入式系统中并不是一件容易的事情。</p>
+                                <p class="blog-indent">由于涉及到将数据从受保护的设备端，通过公共网络途径发送，并且与可能并不知道对方设备的状况，可能存在不同时钟或时间下的远程系统进行交互，因此这是一件具有挑战性的任务。</p>
+                                <p class="blog-indent">协议作为一套标准化的规则和流程，定义了设备或系统之间如何相互交互和交换数据。它建立了一种共同的语言和结构，实现了不同系统之间的无缝互操作性。</p>
+                                <p class="blog-indent">以下列出协议要解决的一些要点：</p>
+                                    <p class="blog-indent">◆ 线路电平的兼容性（Line Level Compatibility）</p>
+                                    <p class="blog-indent">在通信过程中，不同设备可能使用不同的电压级别或信号电平标准来表示1 和 0。
+                                        在设计通信系统或连接设备时，应仔细考虑设备之间的电压级别和信号表示方式，以及采取适当的措施来解决线路电平兼容性问题。这样可以确保设备之间的信号能够正确传输，避免由于电平不匹配导致的通信错误或故障。</p>
+                                    <p class="blog-indent">◆ 时序关系（Timing Relationships）</p>
+                                    <p class="blog-indent">数据中电平的转换是由发送方的时钟确定。接收器通常无法访问此时钟。
+                                        在通信过程中，发送端发送的信号可能会在传输过程中经历时延、失真或干扰等影响。这些因素可能导致接收端难以准确地确定消息的起始点和终止点。为了解决这个问题，接收端通常会使用时钟恢复和信号重建技术。</p>
+                                    <p class="blog-indent">时钟恢复是指接收端使用来自发送端的时钟信息来恢复本地时钟。通过与发送端时钟进行同步，接收端可以在接收到的信号中准确地确定时间间隔和时序关系。</p>
+                                    <p class="blog-indent">信号重建是指接收端使用接收到的信号进行再构建，以恢复信号的原始形态和时序关系。接收端可能会使用等化器、时钟提取器和数据重建器等技术来处理接收到的信号，并准确地确定消息的开始和结束。</p>
+                                    <p class="blog-indent">◆ 多用户的时间管理（Time Management of Multiple Users）</p>
+                                    <p class="blog-indent">在一个网络中，可以有很多设备同时发送和接收数据。多个用户的时间管理是协议必须去解决的问题。协议必须确保所有设备在进行通信时能够公平地访问介质，并且没有任何一个用户在过长时间内占据主导地位。</p>
+                                    <p class="blog-indent">◆ 错误控制或线路噪声的影响（Error Control or Effects of Noise on the line）</p>
+                                    <p class="blog-indent">在任何实际的通信系统中，线路上总会存在一些噪声，这可能会损坏正在传输的数据。协议必须提供检测和纠正这些错误的机制，以便接收端能接收到准确的原始数据。</p>
+                                    <p class="blog-indent blog-font-cata0">这里我们要重点讲一下应对的措施。</p>
+                                    <p class="blog-indent">1. 信号调制：通过使用调制技术，将原始数据转换为频率、相位或幅度变化的信号。这样的信号在传输过程中对噪声更加抗干扰，使得接收端能够更好地恢复原始数据。</p>
+                                    <p class="blog-indent">2. 错误检测和纠正：通信系统可以使用错误检测和纠正技术，如循环冗余校验（CRC）和海明码（Hamming Code），来检测和纠正在传输过程中引入的错误。这些技术允许接收端检测出错误的数据，并尝试恢复或重传受损的数据。</p>
+                                    <p class="blog-indent">3. 噪声过滤和滤波：通信系统可以使用滤波器来滤除线路上的噪声成分。滤波器可以根据噪声的频率特性来选择性地减弱或消除噪声，从而提高数据的可靠性和准确性。</p>
+                                    <p class="blog-indent">4. 信号增强和放大：在接收端，通信系统可以使用信号增强和放大技术来提高接收到的信号强度和质量。这可以包括放大器、前置放大器和信号重构等技术，以增强信号的可靠性和准确性。</p>
+                                    <p class="blog-indent">5. 前向纠错编码：通信系统可以使用前向纠错编码技术，如卷积编码和可变长度编码，以提高对噪声的容忍度。这些编码技术在发送端引入冗余信息，允许接收端在一定程度上纠正噪声引起的错误。</p>
+                                    <p class="blog-indent">◆ 安全（Security）</p>
+                                    <p class="blog-indent">协议必须具有安全性，保护数据的机密性、完整性和可用性。未经授权的用户无法访问数据，数据不会因为外部攻击而失真。</p>
+                                    <p class="blog-indent">◆ 功率控制（Power Control）</p>
+                                    <p class="blog-indent">功率控制在通信协议中起着重要的作用。它涉及到调整和管理通信设备的发送功率，以达到最佳的通信性能和资源利用效率。试想一下如果每个用户都以超过满意性能所需的功率进行传输，那么在共享的射频频谱中将产生大量干扰，导致没有人能够正常进行通信。</p>
+                                    <p class="blog-indent">◆ 功率控制（Power Control）</p>
+                                    <p class="blog-indent">功率控制在通信协议中起着重要的作用。它涉及到调整和管理通信设备的发送功率，以达到最佳的通信性能和资源利用效率。试想一下如果每个用户都以超过满意性能所需的功率进行传输，那么在共享的射频频谱中将产生大量干扰，导致没有人能够正常进行通信。</p>
+                                    <p class="blog-indent">◆ RF频段规划（RF Band Planning）- 信道间隔（Channel Spacing）和带宽（Bandwidth）</p>
+                                    <p class="blog-indent">对于使用RF的协议，有两个重要的点需要考虑：频道之间的间隔和每个频道可以使用的带宽。</p>
+                                    <p class="blog-indent">◆ 消息格式化（Message Formatting）</p>
+                                    <p class="blog-indent">它定义了在通信中传输的消息的结构和组织方式。消息格式化涉及确定消息的起始标识、消息的排列顺序、字段的数据类型和长度等。</p>
+                                    <p class="blog-indent">消息的结构是数据在消息中的排列方式。例如一条消息可能有一个消息头，后面跟着有效负载，然后是一个校验。</p>
+                                    <p class="blog-indent">消息的排列顺序是指他们发送的顺序。例如为了建立连接，一条消息需要在另外一条消息之前发送。</p>
+                                    <p class="blog-indent">◆ 可靠性技术（Techniques to Combat Reliability Issues）</p>
+                                    <p class="blog-indent">如果发送的数据和接收到的数据是一致的，那么我们认为通信是可靠的。但由于传输媒介通常不是100%可靠的，因此必须使用相关技术来对抗不可靠性。</p>
+                                    <p class="blog-indent">对于Bluetooth LE而言，一些技术用于对抗不可靠性问题，扩频（Spread Spectrum）、接收信号强度指示(RSSI)来作为链路评估、良好的调制方式（GFSK）等</p>
+                    </div>
+                </div>
+                <!-- Blog Detail End -->
+            </div>
+
+            <!-- Sidebar Start -->
+            <div class="col-lg-4">
+                <!-- Search Form Start -->
+                <div class="mb-5">
+                    <div class="input-group">
+                        <input type="text" class="form-control p-3" id="searchInput" placeholder="Keyword">
+                        <button class="btn btn-primary px-3" onclick="search()"><i class="fa fa-search"></i> </button>
+                    </div>
+                </div>
+                <!-- Search Form End -->
+                <script>
+                    function search() {
+                        // 获取搜索关键字
+                        var keyword = document.getElementById("searchInput").value;
+                        // 获取内容区域
+                        var content = document.getElementById("content");
+                        // 获取所有内容段落
+                        var paragraphs = content.getElementsByTagName("p");
+
+                        // 遍历每个段落进行搜索
+                        for (var i = 0; i < paragraphs.length; i++) {
+                            var paragraph = paragraphs[i];
+                            var text = paragraph.innerText;
+
+                            // 判断段落中是否包含关键字
+                            if (text.includes(keyword)) {
+                                // 高亮匹配的关键字
+                                var highlightedText = text.replace(new RegExp(keyword, "gi"), "<span class='highlight'>$&</span>");
+                                paragraph.innerHTML = highlightedText;
+                                // 设置滚动目标位置为匹配段落的顶部位置
+                                paragraph.scrollIntoView({ behavior: "smooth", block: "center" });
+
+                                // 停止继续搜索
+                                break;
+                            }
+                        }
+                    }
+                </script>
+                <style>
+                    .highlight {
+                        background-color: yellow;
+                        font-weight: bold;
+                    }
+                </style>
+                <!-- Category Start -->
+                <div class="mb-5 blog_dropdown">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mb-4">类别</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <label for="touch1"><span id = "sliBar">BLE</span></label>
+                        <input type="checkbox" id="touch1">
+                        <ul class="slide d-flex flex-column justify-content-start">
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="blog_protocol.html">协议基础</a>
+                        </ul>
+                        <label for="touch2"><span id="sliBar">嵌入式软件</span></label>
+                        <input type="checkbox" id="touch2">
+                        <ul class="slide d-flex flex-column justify-content-start">
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="blog_main.html">Git协同开发</a>
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="hal_design.html">硬件抽象层(HAL)</a>
+                        </ul>
+                        <label for="touch3"><span id="sliBar">开发工具</span></label>
+                        <input type="checkbox" id="touch3">
+                        <ul class="slide d-flex flex-column justify-content-start">
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="blog_cortex-m_fault.html">Cortex-M Hardfault异常</a>
+                        </ul>
+                        <label for="touch4"><span id="sliBar">C语言相关</span></label>
+                        <input type="checkbox" id="touch4">
+                        <ul class="slide d-flex flex-column justify-content-start">
+
+                        </ul>
+                        <label for="touch5"><span id="sliBar">杂谈</span></label>
+                        <input type="checkbox" id="touch5">
+                        <ul class="slide d-flex flex-column justify-content-start">
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="blog_casual_chat00.html">星链和天眼</a>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Category End -->
+            </div>
+            <!-- Sidebar End -->
+        </div>
+    </div>
+    <!-- Blog End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
