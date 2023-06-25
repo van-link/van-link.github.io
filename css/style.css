@@ -282,7 +282,7 @@ code {
     height: 0px;
 }
 #touch1:checked+.slide {
-    height: 30px;
+    height: 90px;
 }
 #touch2 {
     position: absolute;
