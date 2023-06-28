@@ -178,7 +178,15 @@
                     domain: domain
                 },
                 success: function (data) {
-                    document.getElementById("result").textContent = data.trans_result[0].dst;
+                    if (data.error_code) {
+                        alert(data.error_code + ": " + data.error_msg);
+                        document.getElementById("result").textContent = data.error_code + ": " + data.error_msg;
+                    }
+                    else
+                    {
+                        document.getElementById("result").textContent = data.trans_result[0].dst;
+                    }
+                    
                 }
             });
             loader.classList.remove("loader");
