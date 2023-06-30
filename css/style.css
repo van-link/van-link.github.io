@@ -319,7 +319,7 @@ code {
 }
 .blog-font-toc {
     font-family: 'Jost', sans-serif;
-    font-size: 19px;
+    font-size: 27px;
     font-weight: 600;
     color: var(--dark);
     outline: none;
@@ -336,14 +336,35 @@ code {
 }
 .blog-font-cata0 {
     font-family: 'Jost', sans-serif;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--dark);
     outline: none;
     transition: .5s;
 }
-.blog-indent {
+.blog-content {
     text-indent: 2em;
+}
+.blog-content0 {
+    text-indent: 2em;
+}
+.blog-content0::before{
+    content: "◆ ";
+    font-size: 23px;
+}
+.blog-content1 {
+    text-indent: 4em;
+}
+.blog-content1::before {
+    content: "● ";
+    font-size: 17px;
+}
+h1 {
+    text-align: center;
+}
+.blog-catalog {
+    margin-bottom: 6rem;
+    margin-left: 20%;
 }
 .loader {
     border: 4px solid #f3f3f3;

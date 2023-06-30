@@ -110,171 +110,171 @@
                 <!-- Blog Detail Start -->
                 <div class="mb-5">
                     <img class="img-fluid w-100 rounded mb-5" src="blogs_source/git_Cor/gitCor_main.png" alt="">
-                    <h1 class="mb-4">Git协同开发</h1>
+                    <h1>Git协同开发</h1>
                     <!-- 目录 -->
-                    <div>
+                    <div class="blog-catalog">
                         <ul>
                             <li><a class="blog-font-toc" href="#section1">基本知识</a></li>
                             <ul>
-                                <li><a class="blog-font-cata1" href="#section1.1">1.1 Git基本操作</a></li>
-                                <li><a class="blog-font-cata1" href="#section1.2">1.2 分支</a></li>
-                                <li><a class="blog-font-cata1" href="#section1.3">1.3 分支的操作</a></li>
-                                <li><a class="blog-font-cata1" href="#section1.4">1.4 Git工作流</a></li>
+                                <li><a class="blog-font-cata0" href="#section1.1">1.1 Git基本操作</a></li>
+                                <li><a class="blog-font-cata0" href="#section1.2">1.2 分支</a></li>
+                                <li><a class="blog-font-cata0" href="#section1.3">1.3 分支的操作</a></li>
+                                <li><a class="blog-font-cata0" href="#section1.4">1.4 Git工作流</a></li>
                             </ul>
                             <li><a class="blog-font-toc" href="#section2">方法</a></li>
                             <ul>
-                                <li><a class="blog-font-cata1" href="#section2.1">2.1 Git工作流程图示</a></li>
-                                <li><a class="blog-font-cata1" href="#section2.2">2.2 场景用例</a></li>
-                                <li><a class="blog-font-cata1" href="#section2.3">2.3 分支合并</a></li>
+                                <li><a class="blog-font-cata0" href="#section2.1">2.1 Git工作流程图示</a></li>
+                                <li><a class="blog-font-cata0" href="#section2.2">2.2 场景用例</a></li>
+                                <li><a class="blog-font-cata0" href="#section2.3">2.3 分支合并</a></li>
                             </ul>
                         </ul>
                     </div>
                     <!-- 正文内容 -->
                     <div id="section1">
-                        <h2 class="blog-font-toc">一. 基本知识</h2>
-                            <p class = "blog-indent">大家在看这篇文章的时候，希望能懂基本的操作。</p>
+                        <h2 class="mb-3 blog-font-toc">一. 基本知识</h2>
+                            <p class = "blog-content">大家在看这篇文章的时候，希望能懂基本的操作。</p>
                             <h3 class="blog-font-cata1" id="section1.1">1.1 Git基本操作</h3>
-                                <p class = "blog-indent">git add、git commit、git push.......，大家看下面这张图就可以了</p>
+                                <p class = "blog-content">git add、git commit、git push.......，大家看下面这张图就可以了</p>
                                 <img src="blogs_source/git_Cor/gitCor_1.1.png" class="img-fluid w-60 rounded mb-5">
                             <h3 class="blog-font-cata1" id="section1.2">1.2 分支</h3>
-                                <p class = "blog-indent">首先我们需要理解的就是分支的概念，分支的本质是一个轻量级的可移动指针，我们在创建分支的时候实际上只是创建了一个新的指针，
+                                <p class = "blog-content">首先我们需要理解的就是分支的概念，分支的本质是一个轻量级的可移动指针，我们在创建分支的时候实际上只是创建了一个新的指针，
                                     指向当前分支指针所指向的提交，分支的存在使得多个开发路径可以同时进行，每个分支都可以独立地进行开发和修改，而不会互相干扰。</p>
-                                <p class="blog-indent">◆ 我们创建分支的时候,其实是创建了一个指向当前提交的指针。那么Git是如何知道我们在哪个分支上工作的呢？
+                                <p class="blog-content0">我们创建分支的时候,其实是创建了一个指向当前提交的指针。那么Git是如何知道我们在哪个分支上工作的呢？
                                     其实是它保存的一个'HEAD'的特别指针，'HEAD'是一个特殊的指针，用于表示当前所在的位置或当前所在的分支的最新提交。</p>
                                 <code>git branch tutu01 //创建分支<br>
                                     git checkout tutu01 //切换到分支</code>
                                 <img src="blogs_source/git_Cor/gitCor_1.2_1.png" class="img-fluid w-60 rounded mb-5">
-                                <p class="blog-indent">◆ 我们随即在tutu01分支执行一个提交。</p>
+                                <p class="blog-content0">我们随即在tutu01分支执行一个提交。</p>
                                 <img src="blogs_source/git_Cor/gitCor_1.2_2.png" class="img-fluid w-60 rounded mb-5">
                                 <code>git symbolic-ref HEAD \\显示'HEAD'指针所在的分支名称<br></code>
                                 <img src="blogs_source/git_Cor/gitCor_1.2_3.png" class="img-fluid w-60 rounded mb-5"><br>
                                 <code>git log -1 (--pretty=%d) HEAD \\显示'HEAD'信息 </code>
                                 <img src="blogs_source/git_Cor/gitCor_1.2_4.png" class="img-fluid w-60 rounded mb-5">
-                                <p class="blog-indent"> 或者我们可以直接去 “.git\refs\heads”下面查看</p>
+                                <p class="blog-content"> 或者我们可以直接去 “.git\refs\heads”下面查看</p>
                                 <img src="blogs_source/git_Cor/gitCor_1.2_5.png" class="img-fluid w-60 rounded mb-5">
                                 <img src="blogs_source/git_Cor/gitCor_1.2_6.png" class="img-fluid w-60 rounded mb-5">
-                                <p class="blog-indent">◆ 当然 'HEAD'指针还有一些东西，比如~(tilde) 和^(caret) ，在普通情况下 是等效的。但是在合并提交中，是有区别的。</p>
+                                <p class="blog-content0">当然 'HEAD'指针还有一些东西，比如~(tilde) 和^(caret) ，在普通情况下 是等效的。但是在合并提交中，是有区别的。</p>
                                 <img src="blogs_source/git_Cor/gitCor_1.2_7.png" class="img-fluid w-60 rounded mb-5">
                             <h3 class="blog-font-cata1" id="section1.3">1.3 分支的操作</h3> 
-                                <p class="blog-indent">◆ git pull 命令用于从远程仓库获取最新的提交并将其合并到当前分支。
+                                <p class="blog-content0">git pull 命令用于从远程仓库获取最新的提交并将其合并到当前分支。
                                     它相当于 git fetch 和 git merge 两个命令的组合。运行 'git pull '会发生以下情况：</p>
-                                <p class="blog-indent">①假如当前分支与远程分支有共同的提交历时，并且没有冲突，将自动合并远程分支的更新到当前分支。</p>
+                                <p class="blog-content">①. 假如当前分支与远程分支有共同的提交历时，并且没有冲突，将自动合并远程分支的更新到当前分支。</p>
                                 <img src="blogs_source/git_Cor/gitCor_1.3_1.png" class="img-fluid w-60 rounded mb-5">
-                                <p class="blog-indent">②如果当前分支与远程分支有不同的提交历史，将尝试自动合并这些更新。如果存在冲突，你需要手动解决冲突后再提交。</p>
+                                <p class="blog-content">②. 如果当前分支与远程分支有不同的提交历史，将尝试自动合并这些更新。如果存在冲突，你需要手动解决冲突后再提交。</p>
                                 <img src="blogs_source/git_Cor/gitCor_1.3_2.png" class="img-fluid w-60 rounded mb-5">
-                                <p class="blog-indent">◆ git fetch 命令，用于从远程仓库获取更新的提交和分支信息的命令，它并不会自动合并或修改本地分支,它会产生以下操作：</p>
-                                <p class="blog-indent">①从远程仓库下载更新的提交对象和分支引用。</p>
-                                <p class="blog-indent">②更新本地仓库中的远程分支引用，但不会修改本地分支和工作目录。</p>
-                                <p class="blog-indent">我们可以从‘FETCH_HEAD’ref查看信息</p>
+                                <p class="blog-content0">git fetch 命令，用于从远程仓库获取更新的提交和分支信息的命令，它并不会自动合并或修改本地分支,它会产生以下操作：</p>
+                                <p class="blog-content">①. 从远程仓库下载更新的提交对象和分支引用。</p>
+                                <p class="blog-content">②. 更新本地仓库中的远程分支引用，但不会修改本地分支和工作目录。</p>
+                                <p class="blog-content">我们可以从‘FETCH_HEAD’ref查看信息</p>
                                 <img src="blogs_source/git_Cor/gitCor_1.3_3.png" class="img-fluid w-60 rounded mb-5">
-                                <p class="blog-indent">◆ push branch to remote</p>
-                                <p class="blog-indent">①担当我们推送到远程仓库的时候，git 将会做一个快速合并（fast-forward merge）的操作。
+                                <p class="blog-content0">push branch to remote</p>
+                                <p class="blog-content">①. 担当我们推送到远程仓库的时候，git 将会做一个快速合并（fast-forward merge）的操作。
                                     快速合并操作是指将一个分支的提交直接合并到另一个分支的最新提交上，没有产生河外的提交节点，这种合并方式非常简洁和直接。</p>
                                 <img src="blogs_source/git_Cor/gitCor_1.3_4.png" class="img-fluid w-60 rounded mb-5">
-                                <p class="blog-indent">②当目标分支也有更新，本地分支也有更新，两者没有直接的关系的时候就会产生一个非快进合并（non-fast-forwardmerge）。
+                                <p class="blog-content">②. 当目标分支也有更新，本地分支也有更新，两者没有直接的关系的时候就会产生一个非快进合并（non-fast-forwardmerge）。
                                     （这可能是由于你的分支和目标分支同时有新的提交，彼此没有共同的提交历史；目标分支上的提交被回滚或者撤销，而你的分支没有）。
                                     为了防止意外的覆盖和数据丢失，Git会拒绝非快进合并的操作。确保仓库中的提交历时保持一致和完整性。
                                     当然你也可以用'--force'参数来强制推送，但是一定要小心，因为它可能会导致其他人的工作丢失或产生冲突，应确保在了解后果并与团队成员协商后在考虑此方法。</p>
-                                <p class="blog-indent">要解决这个问题，需要先pull最新的更新到本地，然后再push。</p>
+                                <p class="blog-content">要解决这个问题，需要先pull最新的更新到本地，然后再push。</p>
                             <h3 class="blog-font-cata1" id="section1.4">1.4 Git工作流</h3>
-                                <p class="blog-indent">◆ Branching workflows</p>
-                                <p class="blog-indent">Git分支工作流是一种组织和管理Git代码库中的分支的方法。它定义了如何创建、使用和合并分支以及团队成员之间的协作方式。以下是几种常用的分支工作流：</p>
-                                <p class="blog-indent">①Master</p>
-                                <p class="blog-indent">主分支通常用于发布稳定的、可部署的代码，永久存在的分支</p>
-                                <p class="blog-indent">②Feature branch (aka Topic branch)</p>
-                                <p class="blog-indent">每个新功能都在一个独立的特性分支上开发，通常是基于Develop branch创建的。</p>
-                                <p class="blog-indent">③Release branch</p>
-                                <p class="blog-indent">当我们要推出新版本的时候，创建realease branch，realease branch可以帮助我们来确定新的功能是否能正常的运行，一般是在小批试样阶段。
+                                <p class="blog-content0">Branching workflows</p>
+                                <p class="blog-content">Git分支工作流是一种组织和管理Git代码库中的分支的方法。它定义了如何创建、使用和合并分支以及团队成员之间的协作方式。以下是几种常用的分支工作流：</p>
+                                <p class="blog-content">①. Master</p>
+                                <p class="blog-content">主分支通常用于发布稳定的、可部署的代码，永久存在的分支</p>
+                                <p class="blog-content">②. Feature branch (aka Topic branch)</p>
+                                <p class="blog-content">每个新功能都在一个独立的特性分支上开发，通常是基于Develop branch创建的。</p>
+                                <p class="blog-content">③. Release branch</p>
+                                <p class="blog-content">当我们要推出新版本的时候，创建realease branch，realease branch可以帮助我们来确定新的功能是否能正常的运行，一般是在小批试样阶段。
                                     当我们小批试样结束，就要把这个分支合并到Master，并打一个tag。</p>
-                                <p class="blog-indent">④Hotfix branch</p>
-                                <p class="blog-indent">Hotfix 分支通常在我们需要对我们的代码库进行bug修复的时候，通常是从Master检出，修复完合并到Master，并重新提交pull request审核。</p>
-                                <p class="blog-indent">④Develop branch (aka Integration branch)</p>
-                                <p class="blog-indent">是一个用于进行整体开发和集成的分支，开发分支通常与主分支分离，主分支保持稳定和可部署的状态，而开发分支用于整体开发和集成工作。
+                                <p class="blog-content">④. Hotfix branch</p>
+                                <p class="blog-content">Hotfix 分支通常在我们需要对我们的代码库进行bug修复的时候，通常是从Master检出，修复完合并到Master，并重新提交pull request审核。</p>
+                                <p class="blog-content">⑤. Develop branch (aka Integration branch)</p>
+                                <p class="blog-content">是一个用于进行整体开发和集成的分支，开发分支通常与主分支分离，主分支保持稳定和可部署的状态，而开发分支用于整体开发和集成工作。
                                     新的分支的创建通常基于Develop 分支，所以这也应该是一个永久存在的分支。</p>
-                        <h2 class="blog-font-toc">二. 方法</h2>
-                            <p class="blog-indent">这里建议使用一款IDE来管理。</p>
+                        <h2 class="mb-3 blog-font-toc">二. 方法</h2>
+                            <p class="blog-content">建议使用一款IDE来管理。</p>
                             <h3 class="blog-font-cata1" id="section2.1">2.1 Git工作流程图示</h3>
                                 <img src="blogs_source/git_Cor/gitCor_2.1_1.png" class="img-fluid w-60 rounded mb-5">
-                            <h3 class="blog-font-cata1" id="section2.2">2.2 场景用例</h3>
-                                <p class="blog-indent">①正常流程</p>
-                                    <p class="blog-indent">项目组A开发一款软件，管理者创建了仓库和分支'Master'、'Develop'。并和SE一起将软件的架构和需求整理好，将任务分给组员，猿B和媛C。</p>
-                                    <p class="blog-indent">猿B和媛C把'Develop'分支clone到自己的电脑中，并分别开发自己的组件。</p>
-                                    <p class="blog-indent">猿B和媛C同时创建了临时分支'feature'，并开始编写代码实现。</p>
-                                    <p class="blog-indent">猿B首先开发完成，经过一系列开发测试之后，觉得没有问题了，随后整理好测试记录就合并到了本地的'Develop'分支，并删除了'feature'分支。<br>
+                            <h3 class="blog-font-cata1" id="section2.2">2.2 场景用例:</h3>
+                                <p class="blog-content">①. 正常流程</p>
+                                    <p class="blog-content">项目组A开发一款软件，管理者创建了仓库和分支'Master'、'Develop'。并和SE一起将软件的架构和需求整理好，将任务分给组员，猿B和媛C。</p>
+                                    <p class="blog-content">猿B和媛C把'Develop'分支clone到自己的电脑中，并分别开发自己的组件。</p>
+                                    <p class="blog-content">猿B和媛C同时创建了临时分支'feature'，并开始编写代码实现。</p>
+                                    <p class="blog-content">猿B首先开发完成，经过一系列开发测试之后，觉得没有问题了，随后整理好测试记录就合并到了本地的'Develop'分支，并删除了'feature'分支。<br>
                                     随即基于'Develop'分支创建临时分支'Realease'，并发出测试记录和变更日志放进去。确认没问题之后，合并到'Develop'分支。并建立一个PR到云仓库'Develop'分支。<br>
-                                    <p class="blog-indent">Maintianer收到PR之后集合Dveloper、Reporter进行评审，决定是否合并到云仓库'Develop'。</p>
-                                    <p class="blog-indent">媛C看到猿B提交的记录，并根据变更信息，决定是否要更新自己的。</p>
-                                    <p class="blog-indent">媛C也开发完自自己的代码，通过了PR。</p>
-                                    <p class="blog-indent">猿B和媛C的代码都通过了评审和测试之后，Maintainer负责创建'realsease'分支进行软件的预发布、小批量试样。</p>
-                                    <p class="blog-indent">小批量试样通过后，Maintainer负责合并到'Master'分支，并打一个tag。'Master'分支作为稳定、可部署的分支，可以作为出批量出厂程序。</p>
-                                <p class="blog-indent">②bug修复00</p>
-                                    <p class="blog-indent">产品在运行一段时间后，发现了问题，Maintainer初步预判认为是猿B的组件部分造成的。
+                                    <p class="blog-content">Maintianer收到PR之后集合Dveloper、Reporter进行评审，决定是否合并到云仓库'Develop'。</p>
+                                    <p class="blog-content">媛C看到猿B提交的记录，并根据变更信息，决定是否要更新自己的。</p>
+                                    <p class="blog-content">媛C也开发完自自己的代码，通过了PR。</p>
+                                    <p class="blog-content">猿B和媛C的代码都通过了评审和测试之后，Maintainer负责创建'realsease'分支进行软件的预发布、小批量试样。</p>
+                                    <p class="blog-content">小批量试样通过后，Maintainer负责合并到'Master'分支，并打一个tag。'Master'分支作为稳定、可部署的分支，可以作为出批量出厂程序。</p>
+                                <p class="blog-content">②. bug修复00</p>
+                                    <p class="blog-content">产品在运行一段时间后，发现了问题，Maintainer初步预判认为是猿B的组件部分造成的。
                                         于是基于'Master'创建 临时分支'hotfix'，并指派猿B去解决这个问题。</p>
-                                    <p class="blog-indent">猿B接到指派，将云端'hotfix' clone到本地，随即开始解决问题。</p>
-                                    <p class="blog-indent">猿B解决完问题，重新提交PR。</p>
-                                    <p class="blog-indent">Maintainer收到PR之后集合Dveloper、Reporter进行评审，决定是否合并到云仓库'hotfix'。</p>
-                                    <p class="blog-indent">评审和回归测试完毕，Maintainer将'hotfix'分支合并到'Master'，并删除'hotfix'分支，打一个tag。</p>
-                                <p class="blog-indent">③bug修复01</p>
-                                    <p class="blog-indent">猿B开始解决问题的时候发现并不是自己的组件造成的，是媛C的组件造成的。</p>
-                                    <p class="blog-indent">猿B将自己的理由和记录写上，并提交PR。Maintainer收到PR，集合猿B和媛C进行讨论，最后同意了PR。</p>
-                                    <p class="blog-indent">媛C开始拉取'hotfix'进行修复。</p>
+                                    <p class="blog-content">猿B接到指派，将云端'hotfix' clone到本地，随即开始解决问题。</p>
+                                    <p class="blog-content">猿B解决完问题，重新提交PR。</p>
+                                    <p class="blog-content">Maintainer收到PR之后集合Dveloper、Reporter进行评审，决定是否合并到云仓库'hotfix'。</p>
+                                    <p class="blog-content">评审和回归测试完毕，Maintainer将'hotfix'分支合并到'Master'，并删除'hotfix'分支，打一个tag。</p>
+                                <p class="blog-content">③. bug修复01</p>
+                                    <p class="blog-content">猿B开始解决问题的时候发现并不是自己的组件造成的，是媛C的组件造成的。</p>
+                                    <p class="blog-content">猿B将自己的理由和记录写上，并提交PR。Maintainer收到PR，集合猿B和媛C进行讨论，最后同意了PR。</p>
+                                    <p class="blog-content">媛C开始拉取'hotfix'进行修复。</p>
                                     <b>tips: 问题发现的越早成本越低，假如问题在需求分析阶段被发现的成本是1，那么它在批量之后被发现的成本就会高达500-1000。</b>
                             <h3 class="blog-font-cata1" id="section2.3">2.3 分支合并</h3>
-                                <p class="blog-indent">◆ Merge</p>
-                                    <p class="blog-indent">①fast-foward</p>
-                                        <p class="blog-indent">合并到另一个分支时，被合并分支中的所有更改都会被纳入目标分支，而且被合并分支的历史记录也会被保留。</p>
+                                <p class="blog-content0">Merge</p>
+                                    <p class="blog-content">①. fast-foward</p>
+                                        <p class="blog-content">合并到另一个分支时，被合并分支中的所有更改都会被纳入目标分支，而且被合并分支的历史记录也会被保留。</p>
                                         <img src="blogs_source/git_Cor/gitCor_2.3_1.png" class="img-fluid w-60 rounded mb-5">
-                                    <p class="blog-indent">②no-fast-foward</p>
-                                        <p class="blog-indent">如果存在冲突，或者为了保留合并的历史记录，版本控制系统会生成一个合并提交。
+                                    <p class="blog-content">②. no-fast-foward</p>
+                                        <p class="blog-content">如果存在冲突，或者为了保留合并的历史记录，版本控制系统会生成一个合并提交。
                                             这样的合并提交可以被看作是将不同分支的修改整合在一起的快照。同时，'Master'（或主分支的名称）的位置也会被更新到新创建的合并提交。
                                             这意味着主分支将指向合并提交的位置，将合并后的更改纳入到主分支中。</p>
                                         <img src="blogs_source/git_Cor/gitCor_2.3_2.png" class="img-fluid w-60 rounded mb-5">
                                         <b>tips: 即使fast-foward 是被允许的，但是我们仍然可以强制版本控制器进行non-fast-forward 合并</b>
                                         <img src="blogs_source/git_Cor/gitCor_2.3_3.png" class="img-fluid w-60 rounded mb-5">
-                                        <p class="blog-indent">你有可能会觉得我是吃饱了撑的，但是某些情况下我们想要保留分支的独立性和历史记录，以及在合并过程中保留更多的上下文信息，
+                                        <p class="blog-content">你有可能会觉得我是吃饱了撑的，但是某些情况下我们想要保留分支的独立性和历史记录，以及在合并过程中保留更多的上下文信息，
                                             确保即使分支的提交历史是非线性的，也能将其合并到目标分支中。</p>
-                                        <p class="blog-indent">但是需要注意的是，在强制执行非快进合并时，可能会产生一个新的合并提交，这可能增加了合并历史的复杂性。</p>
-                                        <p class="blog-indent">正如上图所示，'non-fast-forward' merge 保留了'bugfix'分支的原状，这样可以更清楚的了解到情况，
+                                        <p class="blog-content">但是需要注意的是，在强制执行非快进合并时，可能会产生一个新的合并提交，这可能增加了合并历史的复杂性。</p>
+                                        <p class="blog-content">正如上图所示，'non-fast-forward' merge 保留了'bugfix'分支的原状，这样可以更清楚的了解到情况，
                                             并可以轻松的找到起始或者结束为止，并对其进行更改。</p>
-                                <p class="blog-indent">◆ Rebase</p>
-                                    <p class="blog-indent">为了获得更清晰的版本历史记录，我们可以使用Rebase 来合并分支。执行 Rebase操作时，实际上是将提交移动、修改或合并，以创建一个线性的提交序列。
+                                <p class="blog-content0">Rebase</p>
+                                    <p class="blog-content">为了获得更清晰的版本历史记录，我们可以使用Rebase 来合并分支。执行 Rebase操作时，实际上是将提交移动、修改或合并，以创建一个线性的提交序列。
                                         与合并分支不同，Rebase通过将要Rebase的分支上的每个提交应用到更新后的基础分支上，重写了提交历史。</p>
                                     <img src="blogs_source/git_Cor/gitCor_2.3_4.png" class="img-fluid w-60 rounded mb-5">
-                                    <p class="blog-indent">当你将一个 bugfix 分支通过 rebase 合并到 master 分支时，bugfix 分支的提交会被重新应用并追加到 master 分支的末尾。
+                                    <p class="blog-content">当你将一个 bugfix 分支通过 rebase 合并到 master 分支时，bugfix 分支的提交会被重新应用并追加到 master 分支的末尾。
                                         最终的结果是 bugfix 分支历史中的提交形成了一个简单的提交流。</p>
-                                    <p class="blog-indent">这样就保持了 bugfix 分支的独立性，并且将 bugfix 分支的提交顺序保持不变。</p>
-                                    <p class="blog-indent">你会得到一个简洁、线性的 bugfix 分支历史，其中的提交顺序与 master 分支的提交顺序保持一致。
+                                    <p class="blog-content">这样就保持了 bugfix 分支的独立性，并且将 bugfix 分支的提交顺序保持不变。</p>
+                                    <p class="blog-content">你会得到一个简洁、线性的 bugfix 分支历史，其中的提交顺序与 master 分支的提交顺序保持一致。
                                         这样的版本历史更易于跟踪和理解，同时保留了 bugfix 分支的完整性和清晰性。</p>
                                     <b>tips: 需要注意的是，Rebase并不会移动'Master'的位置，所以，你仍需在之后进行fast-forward merge或其他保持记录干净的合并。</b>
-                                <p class="blog-indent">◆ Tags</p>
-                                    <p class="blog-indent">标签用于标记和标识历史中的特定提交。标签通常用于表示发布版本，其中标签的名称（例如 v1.0）就是发布的版本名称。</p>
-                                    <p class="blog-indent">通过使用标签，你可以将特定的提交与某个重要的里程碑、版本或发布相关联。标签提供了一个有意义的名称，使得你可以轻松地识别和访问特定的提交。</p>
-                                    <p class="blog-indent">与分支不同，标签是静态的，不会随着新的提交而移动。一旦创建了标签并与某个提交相关联，它将永久地指向该提交，即使以后有新的提交也不会改变。</p>
-                                    <p class="blog-indent">标签的使用场景（不限于）：</p>
-                                        <p class="blog-indent">① 发布版本：每次发布一个新的版本时，可以使用标签来标记该版本的提交，使得用户可以方便地找到和使用特定的发布版本。</p>
-                                        <p class="blog-indent">② 重要的里程碑：当你的项目达到一个重要的里程碑时，可以使用标签来标记该里程碑的提交，以便于以后可以轻松地找到和访问该里程碑。</p>
-                                        <p class="blog-indent">③ 长期稳定版本：如果你的项目同时存在多个分支，你可以为主要的稳定分支创建标签，以便随时访问该分支的特定提交。</p>
-                                    <p class="blog-indent">有两种tag的类型：</p>
-                                        <p class="blog-indent">① Lightweight tag（轻量标签）：轻量标签主要在你的本地工作区中临时使用。轻量标签与不变的分支类似，只是作为对 Git 历史中特定提交的引用或指针。
+                                <p class="blog-content0">Tags</p>
+                                    <p class="blog-content">标签用于标记和标识历史中的特定提交。标签通常用于表示发布版本，其中标签的名称（例如 v1.0）就是发布的版本名称。</p>
+                                    <p class="blog-content">通过使用标签，你可以将特定的提交与某个重要的里程碑、版本或发布相关联。标签提供了一个有意义的名称，使得你可以轻松地识别和访问特定的提交。</p>
+                                    <p class="blog-content">与分支不同，标签是静态的，不会随着新的提交而移动。一旦创建了标签并与某个提交相关联，它将永久地指向该提交，即使以后有新的提交也不会改变。</p>
+                                    <p class="blog-content">标签的使用场景（不限于）：</p>
+                                        <p class="blog-content">①. 发布版本：每次发布一个新的版本时，可以使用标签来标记该版本的提交，使得用户可以方便地找到和使用特定的发布版本。</p>
+                                        <p class="blog-content">②. 重要的里程碑：当你的项目达到一个重要的里程碑时，可以使用标签来标记该里程碑的提交，以便于以后可以轻松地找到和访问该里程碑。</p>
+                                        <p class="blog-content">③. 长期稳定版本：如果你的项目同时存在多个分支，你可以为主要的稳定分支创建标签，以便随时访问该分支的特定提交。</p>
+                                    <p class="blog-content">有两种tag的类型：</p>
+                                        <p class="blog-content">①. Lightweight tag（轻量标签）：轻量标签主要在你的本地工作区中临时使用。轻量标签与不变的分支类似，只是作为对 Git 历史中特定提交的引用或指针。
                                             与注释标签不同，轻量标签不包含额外的元数据，如标签者的姓名、电子邮件和日期。</p>
-                                        <p class="blog-indent">② Annotated tag（注释标签）：注释标签是一种包含附加信息的对象，存储在 Git数据库中。它们不仅仅是对特定提交的引用，还包含了更多的元数据。
+                                        <p class="blog-content">②. Annotated tag（注释标签）：注释标签是一种包含附加信息的对象，存储在 Git数据库中。它们不仅仅是对特定提交的引用，还包含了更多的元数据。
                                             通过注释标签，你可以提供关于标签的详细信息，包括注释说明标签的用途或目的、签名验证标签的完整性、以及标签的创建日期和标签者的身份信息。</p>
-                                <p class="blog-indent">◆ pull requests</p>
-                                    <p class="blog-indent">代码审查是软件开发中非常重要的环节，可以带来很多好处，包括提高代码质量、发现错误和漏洞、在团队之间分享知识以及保持一致的代码风格。
+                                <p class="blog-content0">pull requests</p>
+                                    <p class="blog-content">代码审查是软件开发中非常重要的环节，可以带来很多好处，包括提高代码质量、发现错误和漏洞、在团队之间分享知识以及保持一致的代码风格。
                                         然而代码审查是一件很麻烦的事，很多时候人们忙于其他任务或觉得查看太耗时，往往忽视了代码审查。</p>
-                                    <p class="blog-indent">pull request 使得代码审查更加的容易、确保其不会被忽视。</p>
+                                    <p class="blog-content">pull request 使得代码审查更加的容易、确保其不会被忽视。</p>
                                     <img src="blogs_source/git_Cor/gitCor_2.3_5.png" class="img-fluid w-60 rounded mb-5">
                                     <img src="blogs_source/git_Cor/gitCor_2.3_6.png" class="img-fluid w-60 rounded mb-5">
-                                    <p class="blog-indent">Pull request一般流程如下：</p>
-                                        <p class="blog-indent">① [Developer] Clone or pull 目标代码</p>
-                                        <p class="blog-indent">② [Developer] 创建工作流</p>
-                                        <p class="blog-indent">③ [Developer] 开发代码</p>
-                                        <p class="blog-indent">④ [Developer] 开发完成之后push</p>
-                                        <p class="blog-indent">⑤ [Developer] 创建pull request</p>
-                                        <p class="blog-indent">⑥ [Maintainer] 检查变更日志、review代码</p>
-                                        <p class="blog-indent">⑦ [Maintainer] 判断变更是否正确，代码是否符合规范，必要时向开发人员发出反馈</p>
-                                        <p class="blog-indent">⑧ [Maintainer] 如果没有问题的话进行合并</p>
-                                        <p class="blog-indent">⑨ [Maintainer] 如果有问题的话关闭请求，并发回反馈</p>
+                                    <p class="blog-content">Pull request一般流程如下：</p>
+                                        <p class="blog-content">①. [Developer] Clone or pull 目标代码</p>
+                                        <p class="blog-content">②. [Developer] 创建工作流</p>
+                                        <p class="blog-content">③. [Developer] 开发代码</p>
+                                        <p class="blog-content">④. [Developer] 开发完成之后push</p>
+                                        <p class="blog-content">⑤. [Developer] 创建pull request</p>
+                                        <p class="blog-content">⑥. [Maintainer] 检查变更日志、review代码</p>
+                                        <p class="blog-content">⑦. [Maintainer] 判断变更是否正确，代码是否符合规范，必要时向开发人员发出反馈</p>
+                                        <p class="blog-content">⑧. [Maintainer] 如果没有问题的话进行合并</p>
+                                        <p class="blog-content">⑨. [Maintainer] 如果有问题的话关闭请求，并发回反馈</p>
                                         <img src="blogs_source/git_Cor/gitCor_2.3_7.png" class="img-fluid w-60 rounded mb-5">                                        
                     </div>
                 </div>
