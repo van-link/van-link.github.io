@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>IVAN HOME - Welcome</title>
+    <link rel="icon" type="image/x-icon" href="../img/van-link.ico">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-telephone me-2"></i>+086
+                            1234567890a</a>
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href=""><i
+                                class="bi bi-envelope me-2"></i>halodajude@163.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-body ps-2" href="" onmouseover="showImage()" onmouseout="hideImage()">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <div id="imageContainer"
+                            style="position: fixed; top: 10px; right: 10px; width: 16%; height: 16%; z-index: 9999; display: none;">
+                            <img src="../img/contact/weixin.jpg" alt="" style="max-width: 100%; height: auto;">
+                        </div>
+                        <script>
+                            function showImage() {
+                                var imageContainer = document.getElementById("imageContainer");
+                                imageContainer.style.display = "inline-block";
+                            }
+
+                            function hideImage() {
+                                var imageContainer = document.getElementById("imageContainer");
+                                imageContainer.style.display = "none";
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="../index.html" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-robot me-2"></i>van-link</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="../index.html" class="nav-item nav-link">主页</a>
+                        <a href="../tools.html" class="nav-item nav-link">工具</a>
+                        <a href="blog_main.html" class="nav-item nav-link active">博客</a>
+                        <a href="../about.html" class="nav-item nav-link">关于</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Blog Start -->
+    <div id = "content" class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <!-- Blog Detail Start -->
+                <div class="mb-5">
+                    <img class="img-fluid w-100 rounded mb-5" src="blogs_source/cmake/cmake_main.png" alt="">
+                    <h1>CMake + Python 搭建构建系统</h1>
+                    <!-- 目录 -->
+                    <div class="blog-catalog">
+                        <ul>
+                            <li><a class="blog-font-toc" href="#section1">构建系统</a></li>
+                            <ul>
+                                <li><a class="blog-font-cata0" href="#section1.1">1.1 编译器（compile）与构建系统（build system）</a></li>
+                                <li><a class="blog-font-cata0" href="#section1.2">1.2 CMake</a></li>
+                            </ul>
+                            <li><a class="blog-font-toc" href="#section2">stm32 + cmake 开发环境</a></li>
+                            <ul>
+                                <li><a class="blog-font-cata0" href="#section2.1">2.1 stm32Cube</a></li>
+                                <li><a class="blog-font-cata0" href="#section2.2">2.2 CMake</a></li>
+                            </ul>
+                            <li><a class="blog-font-toc" href="#section3">Python + CMake</a></li>
+                            <ul>
+                                <li><a class="blog-font-cata0" href="#section3.1">2.1 stm32Cube</a></li>
+                                <li><a class="blog-font-cata0" href="#section3.2">2.2 CMake</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <!-- 正文内容 -->
+                    <div>
+                        <h2 class="mb-3 blog-font-toc"  id="section1">一. 构建系统</h2>
+                            <h3 class="blog-font-cata1" id="section1.1">1.1 编译器（compile）与构建系统（build system）</h3>
+                                <p class="blog-content0">编译器</p>
+                                <p class="blog-content">在软件开发中，编译器负责将源代码文件转化为可执行的二进制代码文件的，也可以说是将源代码“翻译”为可执行文件。</p>
+                                <p class="blog-content">比如我们经常用的gcc，基本步骤是预处理、编译、汇编、链接。最终生成可执行文件或者共享库，绝大多数编译器的工作都是类似的。</p>
+                                <p class="blog-content0">构建系统</p>
+                                <p class="blog-content">构建系统是一组软件工具和实用程序的集合，旨在简化和自动化软件开发中的构建过程。它提供了一个框架，用于管理和协调构建软件项目中涉及的各种任务和步骤。
+                                    通常包括但不限于编译源代码、解决依赖关系、链接库、生成可执行文件或分发包以及执行其他构建相关任务的工具。如我们常见的有GNU Make、Ninja等。</p>
+                                <p class="blog-content">由此可见，构建系统是包含编译器的。</p>
+                                <p class="blog-content">尽管随着时间的推移，构建系统也在不断发展和改进，引入了更多的功能和特性，以满足不断变化的软件开发需求。比如，构建缓存、增量编译、并行构建等技术。
+                                    但他们的大多数核心算法自从Make首次使用有向无环图（DAG）来表示文件之间的依赖关系，并确定构建顺序以来并没有发生太大的变化。</p>
+                                <p class="blog-content">1. 我们是否可以直接使用编译器而不是用构建系统？</p>
+                                <p class="blog-content">对构建系统的需求可能不那么显而易见。大多数工程师在学习编码时不会使用构建系统。大多数工程师会先直接从命令行调用 gcc 等工具，或在集成开发环境 (IDE)，如KEIL ECLIPS SES等中
+                                中调用同类工具。只要所有源代码都位于同一目录中，就可以直接使用命令：</p>
+                                <code>gcc -c file1.c -o file1.o<br>
+                                    gcc -c file2.c -o file2.o<br>
+                                    gcc file1.o file2.o -o output<br>
+                                    objcopy -O ihex output firmware.hex<br>
+                                </code>
+                                <p class="blog-content">不过，一旦代码扩展，复杂功能就会开始。假设源文件位于不同的目录中，那么就需要在命令中指定路径。这样做会导致命令脚本变得复杂，难以维护。
+                                    并且大型系统通常涉及使用各种编程语言编写的不同部分，并且这些部分之间具有网络依赖项，这意味着，单一语言的编译器可能无法构建整个系统。在处理来自多种语言或多个编译单元的代码后，构建代码就不再是一步式流程了。</p>
+                                <p class="blog-content">编译器也许可以只能到可以查看当前目录中查找要导入的代码，但是它却不能处理外部依赖项。例如java中的第三方jar文件。
+                                    如果没有构建系统，您可以通过从互联网下载依赖项并将其粘贴在硬盘上的 lib 文件夹中，然后将编译器配置为从该目录中读取库来管理。随着时间的推移，这些外部依赖项的更新、版本和源代码很难维护。</p>
+                                <p class="blog-content">2. 我们是否可以使用shell脚本？</p>
+                                <p class="blog-content">在最开始的时候，我们确实可以使用shell 脚本按照正确的顺序构件内容，这种做法可以在一段时间是可以解决问题。但随着时间的推移，系统依赖项越来越复杂，shell脚本将不剧本自动处理文件依赖、增量构建、并行处理、缓存管理等高级功能。
+                                    也就不能判断哪些文件需要重新编译。shell 脚本需要手动去添加修改，会使得我们的工作变得更加复杂。也许我们调试shell脚本所消耗的时间成本几乎和处理实际代码所消耗的时间一样多。</p>
+                                <p class="blog-content">shell脚本也不支持跨平台，可移植性较差，并且缺乏灵活的扩展能力（比如插件和扩展生态系统）。</p>
+                            <h3 class="blog-font-cata1" id="section1.2">1.2 CMake</h3>
+                                <p class="blog-content">CMake是一个可扩展、开源的构建系统，它以独立于编译器的方式来管理操作系统中的构建过程。</p>
+                                <p class="blog-content">和其他的构建系统不同，CMake 并不试图取代特定平台上的本地构建环境，而是与其结合使用。意思就是，Cmak e提供了一种独立于具体构建环境的、跨平台的构建配置语言和工具，用于生成本地构建系统所需的构建文件（如Makefile、Visual
+                                Studio、Ninja项目文件等）。这样，开发人员可以使用CMake来描述项目的构建过程和依赖关系，而无需直接与特定平台的构建系统交互。可以理解为构建系统更上层的抽象，用户只需编辑CMakeList.txt 这个文件来描述配置和规则，那它就可以按需生成适用于目标平台的本地狗见文件。</p>
+                                <p class="blog-content">CMake定义了自己的语法和内置功能，并且可以用其他脚本语言来调用它来解释并声称实际的构建文件，下面将展示具体的配置文件：</p>
+                                <p class="blog-content0">CMakeLists.txt</p>
+                                <p class="blog-content">CMakeLists.txt 文件存放于构建的项目工程根目录下。如果存在多个模块，并且每个模块都可以单独的编译构建，那么可以将CMakeLists.txt 文件放到子模块文件夹中。</p>
+                                <p class="blog-content0">.cmake</p>
+                                <p class="blog-content">.cmake 文件作为CMakeLists.txt 文件的扩展，用于执行特定的构建任务或配置环境。通过将这些任务或配置放在独立的.cmake 文件中，可以使CMakeLists.txt文件更加清晰和简洁。
+                                    .cmake文件还可以用于定义模块（modules）以支持项目的构建。这些模块可以用于分离库的构建过程或为复杂的多模块项目提供额外的方法。
+                                </p>
+                                <p class="blog-content0">CMake 命令</p>
+                                <p class="blog-content">CMake 命令类似于C/C++DE 的方法或函数，接收参数列表并相应地执行特定的任务。Cmake命令不区分大小写，并提供一些内置的命令，这些都可以去CMake的官方文档中查找
+                                    <a href="https://cmake.org/cmake/help/latest/manual/cmake-commands.7.html">《CMake Commands》</a>。</p>
+                                </p>
+                                <p class="blog-content">一些常用的内置命令：</p>
+                                <p class="blog-content1">message: 用于打印给定的信息</p>
+                                <p class="blog-content1">cmake_minimum_required: 设置CMake要使用的最低版本</p>
+                                <p class="blog-content1">add_executable: 添加给定名称的可执行目标</p>
+                                <p class="blog-content1">add_library: 用于定义库目标</p>
+                                <p class="blog-content1">add_subdirectory: 添加一个子构建目录。</p>
+                                <p class="blog-content">一些条件、循环、迭代、赋值命令：</p>
+                                <p class="blog-content1">if, endif</p>
+                                <p class="blog-content1">elif, endif</p>
+                                <p class="blog-content1">while, endwhile</p>
+                                <p class="blog-content1">foreach, endforeach</p>
+                                <p class="blog-content1">list</p>
+                                <p class="blog-content1">return</p>
+                                <p class="blog-content1">set_property（给变量赋值）</p>
+                                <p class="blog-content">CMake 并不强制要求缩进，但是仍然建议使用缩进，CMake并没有类似“;”来作为语句的结束符。所有的条件语句的结束都有其相应的结束命令，如 endif, endwhile, endforeach</p>
+                                <p class="blog-content0">CMake 环境变量</p>
+                                <p class="blog-content">环境变量可以用于配置编译器标志、链接器标志和测试配置，以进行常规的构建过程。变量区分大小写它们特别适用于指导编译器在特定目录中搜索库文件和头文件。环境变量的详细列表可以从链接中获取：
+                                <a href="https://cmake.org/cmake/help/latest/manual/cmake-env-variables.7.html">《CMake Environment Variables》</a></p>
+                                <p class="blog-content">可以使用${variable_name}来访问变量值,也可用set命令来为新变量设置值或更改现有的值：</p>
+                                <code>message("CXX Standard: ${CMAKE_CXX_STANDARD}")<br>
+                                set(CMAKE_CXX_STANDARD 14)</code>
+                                <p class="blog-content0">CMake Lists</p>
+                                <p class="blog-content">在 CMake 中，所有的值都被存储为字符串。然而，在某些上下文中，一个字符串可以被视为列表来使用。
+                                    CMake 中的列表是由分号";"分隔的字符串，可以在某些命令和函数中使用。当一个字符串被视为列表时，可以通过特定的语法来操作和访问其中的元素。</p>
+                                <code>
+                                    set(files a.txt b.txt c.txt)<br>
+                                    message("Files: ${files}")<br>
+                                    foreach(file ${files})<br>
+                                    &nbsp; message("Filename: ${file}")<br>
+                                    endforeach()<br>
+                                </code>
+                                <img src="blogs_source/cmake/cmake_module.png" class="img-fluid w-60 rounded mb-5">
+                                <p class="blog-content0">CMake 生成器表达式（Generator Expressions）</p>
+                                <p class="blog-content">生成器表达式在构建系统生成期间进行评估，以生成针对每个构建配置特定的信息。它是一种特殊的语法，用于在构建系统生成期间根据构建配置生成特定的信息。
+                                    生成器表达式可以在CMakeLists.txt 文件中的多个地方使用，例如在目标属性、编译器选项、链接器选项等中。比如，LINK_LIBRARIES, INCLUDE_DIRECTORIES, COMPILE_DEFINITIONS等，在生成期间，这些表达式会被展开为实际的值或信息。它们可以根据构建类型、目标平台、编译器、操作系统等条件生成不同的结果。<br>
+                                    我们也可以使用命令，例如target_link_libraries(), target_include_directories(), target_compile_definitions()等,如下示例：</p>
+                                </p>
+                                <code>
+                                    target_compile_options(my_target PRIVATE<br>
+                                    &nbsp; $<$&ltCONFIG:Debug&gt:-O0 -g><br>
+                                    &nbsp; $<$&ltCONFIG:Release&gt:-O3><br>
+                                    )
+                                </code>
+                        <h2 class="mb-3 blog-font-toc" id="section2">二. stm32 + cmake 开发环境</h2>
+                            <h3 class="blog-font-cata1" id="section2.1">2.1 stm32Cube</h3>
+                            <p class="blog-content0">使用stm32Cube生成工程</p>
+                            <p class="blog-content1">点击Project Mangager,生成Makefile</p>
+                            <img src="blogs_source/cmake/cmake_makefile00.png" class="img-fluid w-60 rounded mb-5">
+                            <p class="blog-content1">生成的工程应该如下图所示：</p>
+                            <img src="blogs_source/cmake/cmake_makefile01.png" class="img-fluid w-60 rounded mb-5">
+                            <p class="blog-content1">输入make指令</p>
+                            <img src="blogs_source/cmake/cmake_makefile02.png" class="img-fluid w-60 rounded mb-5">
+                            <p class="blog-content">保存make日志</p>
+                            <p class="blog-content1">删除Makefile 和build 文件夹</p>
+                            <p class="blog-content0">创建CMake构建系统</p>
+                            <p class="blog-content1">在工程根目录下创建CMakeLists.txt 和 gcc-arm-none-eabi.cmake。
+                                gcc-arm-none-eabi.cmake 用于基于gcc-arm-none-eabi的配置。配置参数可以从之前保存的make 日志里查找</p>
+                            <img src="blogs_source/cmake/cmake_makefile03.png" class="img-fluid w-60 rounded mb-5">
+                            <img src="blogs_source/cmake/cmake_makefile04.png" class="img-fluid w-60 rounded mb-5">
+                            <img src="blogs_source/cmake/cmake_makefile05.png" class="img-fluid w-60 rounded mb-5">
+                            <img src="blogs_source/cmake/cmake_makefile06.png" class="img-fluid w-60 rounded mb-5">
+                            <p class="blog-content0">输入命令：</p>
+                            <code>cmake -Bbuild -DCMAKE_TOOLCHAIN_FILE=gcc-arm-none-eabi.cmake -DCMAKE_BUILD_TYPE=Debug
+                            -DCMAKE_EXPORT_COMPILE_COMMANDS=true -G "MinGW Makefiles"</code>
+                            <img src="blogs_source/cmake/cmake_makefile07.png" class="img-fluid w-60 rounded mb-5">
+                            <p class="blog-content">然后进入build目录就可以看到生成的Makefile 文件，在命令窗口输入make。</p>
+                            <img src="blogs_source/cmake/cmake_makefile08.png" class="img-fluid w-60 rounded mb-5">
+                            <p class="blog-content">命令执行成功之后可以看到在build目录下生成了我们需要的文件</p>
+                            <img src="blogs_source/cmake/cmake_makefile09.png" class="img-fluid w-60 rounded mb-5">
+                        <h2 class="mb-3 blog-font-toc" id="section3">三. Python + CMake</h2>
+                        <p class="blog-content">我们在熟悉了CMake的操作之后，仍然会有疑问，我们每次在生成makefile文件的时候都要敲一些命令,类似 cmake -Bbuild -DCMAKE_TOOLCHAIN_FILE=gcc-arm-none-eabi.cmake -DCMAKE_BUILD_TYPE=Debug
+                        -DCMAKE_EXPORT_COMPILE_COMMANDS=true -G "MinGW Makefiles" 但有时候我并不记得这些命令，我只记得板子的型号，是否有更简单便捷的办法？</p>
+                        <p class="blog-content">当然有，那就是强大的Python。</p>
+                            <h3 class="blog-font-cata1" id="section3.1">3.1 Python</h3>
+                            <p class="blog-content">Python 是一种高级、通用、解释型的编程语言，它被设计用于简单而清晰的语法。它具有丰富的标准库和大量的第三方库，使得它适用于各种不同的应用领域。<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;它是一种动态类型语言，不需要事先声明变量的类型。<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;它是解释型语言，无需编译，可以逐行运行代码。<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;它的生态系统中有大量的第三方库，提供了各种功能扩展和领域特定的解决方案。<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;它可以在多个操作系统上运行，包括 Windows、macOS、Linux 等。
+                            </p>
+                            <p class="blog-content">我们搭建一个如下图所示的简单目录：</p>
+                            <img src="blogs_source/cmake/cmake_pyMake00.png" class="img-fluid w-60 rounded mb-5">
+                            <p class="blog-content">其中包含两个工程"led" 和"blink"，每个工程下放一个CMakeLists.txt, 里面内容如下图所示打印出自己的工程名：</p>
+                            <img src="blogs_source/cmake/cmake_pyMake01.png" class="img-fluid w-60 rounded mb-5">
+                            <p class="blog-content">在根目录下创建一个python文件，命名为build.py, 内容如下：</p>
+                            <img src="blogs_source/cmake/cmake_pyMake02.png" class="img-fluid w-60 rounded mb-5">
+                            <img src="blogs_source/cmake/cmake_pyMake03.png" class="img-fluid w-60 rounded mb-5">
+                            <p class="blog-content">在命令行输入'python .\build.py -B led', 可以看到生成的对应'led'板子的构建文件，如下图所示：</p>
+                            <img src="blogs_source/cmake/cmake_pyMake04.png" class="img-fluid w-60 rounded mb-5">
+                            <p class="blog-content">在命令行输入'python .\build.py -B blink', 可以看到生成的对应'blink'板子的构建文件，如下图所示：</p>
+                            <img src="blogs_source/cmake/cmake_pyMake05.png" class="img-fluid w-60 rounded mb-5">
+                        <p class="blog-content">有时候我们不能安装python环境，那么我们可以将它打包成一个exe 文件，用如下命令，这里我选择的是Pyinstaller，当然你也可以选择其他的工具。
+                            <code>pyinstaller.exe --onefile .\build.py</code>
+                        </p>
+                        <p class="blog-content">打包完成之后，我们可以看到在dist目录下生成了一个exe文件，我们可以将它拷贝到工程目录下，然后在命令行输入'build.exe -B led'，就可以看到生成的对应'led'板子的构建文件，如下图所示：</p>
+                        <img src="blogs_source/cmake/cmake_pyMake06.png" class="img-fluid w-60 rounded mb-5">
+                        <p class="blog-content">你也可以将它添加到环境变量里，这样每次都可以直接执行命令。</p>
+
+                    </div>
+                </div>
+                <!-- Blog Detail End -->
+            </div>
+
+            <!-- Sidebar Start -->
+            <div class="col-lg-4">
+                <!-- Search Form Start -->
+                <div class="mb-5">
+                    <div class="input-group">
+                        <input type="text" class="form-control p-3" id="searchInput" placeholder="Keyword">
+                        <button class="btn btn-primary px-3" onclick="search()"><i class="fa fa-search"></i> </button>
+                    </div>
+                </div>
+                <!-- Search Form End -->
+                <script>
+                    function search() {
+                        // 获取搜索关键字
+                        var keyword = document.getElementById("searchInput").value;
+                        // 获取内容区域
+                        var content = document.getElementById("content");
+                        // 获取所有内容段落
+                        var paragraphs = content.getElementsByTagName("p");
+
+                        // 遍历每个段落进行搜索
+                        for (var i = 0; i < paragraphs.length; i++) {
+                            var paragraph = paragraphs[i];
+                            var text = paragraph.innerText;
+
+                            // 判断段落中是否包含关键字
+                            if (text.includes(keyword)) {
+                                // 高亮匹配的关键字
+                                var highlightedText = text.replace(new RegExp(keyword, "gi"), "<span class='highlight'>$&</span>");
+                                paragraph.innerHTML = highlightedText;
+                                // 设置滚动目标位置为匹配段落的顶部位置
+                                paragraph.scrollIntoView({ behavior: "smooth", block: "center" });
+
+                                // 停止继续搜索
+                                break;
+                            }
+                        }
+                    }
+                </script>
+                <style>
+                    .highlight {
+                        background-color: yellow;
+                        font-weight: bold;
+                    }
+                </style>
+                <!-- Category Start -->
+                <div class="mb-5 blog_dropdown">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mb-4">类别</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <label for="touch1"><span id = "sliBar">BLE</span></label>
+                        <input type="checkbox" id="touch1">
+                        <ul class="slide d-flex flex-column justify-content-start">
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="blog_protocol.html">协议基础</a>
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="blog_ble-stack.html">BLE 协议栈</a>
+                        </ul>
+                        <label for="touch2"><span id="sliBar">嵌入式软件</span></label>
+                        <input type="checkbox" id="touch2">
+                        <ul class="slide d-flex flex-column justify-content-start">
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="blog_main.html">Git协同开发</a>
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="hal_design.html">硬件抽象层(HAL)</a>
+                        </ul>
+                        <label for="touch3"><span id="sliBar">开发工具</span></label>
+                        <input type="checkbox" id="touch3">
+                        <ul class="slide d-flex flex-column justify-content-start">
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="blog_cortex-m_fault.html">Cortex-M Hardfault异常</a>
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="blog_cmake.html">CMake + Python 搭建构建系统</a>
+                        </ul>
+                        <label for="touch4"><span id="sliBar">C语言相关</span></label>
+                        <input type="checkbox" id="touch4">
+                        <ul class="slide d-flex flex-column justify-content-start">
+
+                        </ul>
+                        <label for="touch5"><span id="sliBar">杂谈</span></label>
+                        <input type="checkbox" id="touch5">
+                        <ul class="slide d-flex flex-column justify-content-start">
+                            <a class="h5 bg-light rounded py-2 px-3 mb-2" href="blog_casual_chat00.html">星链和天眼</a>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Category End -->
+            </div>
+            <!-- Sidebar End -->
+        </div>
+    </div>
+    <!-- Blog End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
